@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+        <header class="masthead" style="background-image: url( {{ url_for('static',filename= 'assets/img/home-bg.jpg' ) }})">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>DASH BORD</h1>
+                            <span class="subheading">There is no hugs !! only bugs !!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+<div class="container">
+    <h1>BASIC ACTION</h1>
+    <a class="btn btn-primary text-uppercase" href="/edit/0"> add new Posts</a>
+    <a class="btn btn-primary text-uppercase" href="/logout"> Logout</a>
+    <hr>
+    <h1>UPLODE FILE HERE</h1>
+
+    <form action="/uploder" method="post" enctype="multipart/form-data">
+    <input type="file" name="file1">
+    <button class="btn btn-primary" type="submit">submitt</button>
+        </form>
+    <hr>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">sno</th>
+      <th scope="col">title</th>
+      <th scope="col">date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in posts %}
+    <tr>
+      <td>{{post.sno}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.date}}</td>
+      <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary">Edit</button></a></td>
+       <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary">delete</button></a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <!-- Post preview-->
+
+
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

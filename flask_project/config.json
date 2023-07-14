@@ -1,0 +1,20 @@
+{
+  "parms": {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/codeninja",
+    "prod_uri": "mysql://root:@localhost/codeninja",
+    "fb_url": "https://facbook.com/codeninja",
+    "tw_url": "https://twitter.com/codeninja",
+    "gt": "https://github.com/RAVIKUMAR9700",
+    "blog_name": "Code Ninja!!",
+    "tagline": "There is no hugs! Only Bugs!",
+    "user": "rc0680526@gmail.com",
+    "text": "hi my name is rohit. i am from punjab and i am currently worked at mohali in company adi backoofice proffesional pvt.ltd",
+    "pass": "",
+    "no_posts": 6,
+    "admin_user":"rohit",
+    "password": "rk0001",
+    "location": "D:\\flask_project\\static\\uplode files"
+
+  }
+}
